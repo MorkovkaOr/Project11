@@ -7,9 +7,9 @@ using std::endl;
 #define tab "\t"
 int** Allocate(const int rows, const int cols);
 char** Allocatec(const int rows, const int cols);
+
 template<typename T>
 void Clear(T**& arr, const int rows);
-
 void FillRand(int** arr, const int rows, const int cols);
 void FillRand(char** arr, const int rows, const int cols);
 template<typename T>
@@ -40,8 +40,6 @@ template<typename T>
 void pop_col_left(T** arr, const int rows, int& cols);
 template<typename T>
 void erase_col(T** arr, const int rows, int& cols, int position);
-template<typename T>
-//#define DYNAMIC_MEMORY_1
 #define DYNAMIC_MEMORY_2
 
 void main()
@@ -120,7 +118,7 @@ void main()
 	Clear(arr, rows);
 
 	//ќбъ€вление двумерного динамического массива:
-	char** arrc = Allocate(rows, cols);
+	char** arrc = Allocatec(rows, cols);
 
 	//»спользование двумерного динамического массива:
 	FillRand(arrc, rows, cols);
